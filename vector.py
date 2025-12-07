@@ -4,7 +4,7 @@ from langchain_core.documents import Document
 import os
 import pandas as pd
 
-CSV_PATH = "data/restaurant.csv"
+CSV_PATH = "data/restaurant_reviews.csv"
 DB_PATH = "./chroma_db"
 COLLECTION_NAME = "restaurant_reviews"
 
@@ -41,3 +41,4 @@ if add_documents:
 retriever = vector_store.as_retriever(
     search_kwargs={"k": 5} # default
 )
+
